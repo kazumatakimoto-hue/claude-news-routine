@@ -1,3 +1,15 @@
 {
-  "model": "claude-opus-4-8"
+  "model": "claude-opus-4-8",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/jst-date.sh\""
+          }
+        ]
+      }
+    ]
+  }
 }
